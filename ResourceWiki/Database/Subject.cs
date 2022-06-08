@@ -8,6 +8,6 @@ namespace ResourceWiki.Database
 {
     public class Subject
     {
-        public string Chapter { get; set; }
+        public string Chapter { get; }
     }
 }

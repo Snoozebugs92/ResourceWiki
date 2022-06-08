@@ -5,23 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ResourceWiki"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Window.Background ="LightSlateGray" 
+        Title="ResourceWiki" Height="450" Width="800">
+        
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBox Name="SearchQuery" Width="200" Height="25"
-                 VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,15,0,0" />
-        <ComboBox Name="SearchResults" IsSynchronizedWithCurrentItem="True" 
-                  Width="200" Height="25" VerticalAlignment="Top" Margin="15,15,0,0" />
-        <Button Name="SearchButton" Content="Search" Background="Aqua"
+        <TextBox Name="SearchQuery" Width="195" Height="25" Background="Gainsboro"
+                 VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,15,0,0" TextChanged="SearchQuery_TextChanged" />
+        <ComboBox Name="SearchResults" IsSynchronizedWithCurrentItem="True" Background="LightGray"
+                  Width="200" Height="25" VerticalAlignment="Top" Margin="15,15,0,0" SelectionChanged="SearchResults_SelectionChanged" />
+        <Button Name="SearchButton" Content="Search" Background="Aqua" Click="SearchButton_Click" IsDefault="True"
                 Grid.Column="1" Height="25" Width="40" Margin="450,15,0,10" />
-        <Button Name="ShowButton" Content="Show" Background="Aqua"
+        <Button Name="ShowButton" Content="Show" Background="Aqua" Click="ShowButton_Click"
                 Grid.Column="1" Height="25" Width="40" Margin="570,15,0,10" />
-        <Button Name="AddButton" Content="Add" Background="DarkSalmon"
+        <Button Name="AddButton" Content="Add" Background="DarkSalmon" Click="AddButton_Click"
                 Grid.Column="1" Height="25" Width="40" Margin="700,15,0,10" />
-        <ListBox Name="TextContent" Width="750" Height="475" Margin="25,30,25,29" Grid.Row="1" />
-        
+        <ListBox Name="TextContent" Height="345" Margin="30,10,30,29" Grid.Row="1" Background="LightGray"
+                 SelectionChanged="TextContent_SelectionChanged" />
+
     </Grid>
 </Window>

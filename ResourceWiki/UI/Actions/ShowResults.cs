@@ -13,7 +13,7 @@ namespace ResourceWiki.UI.Actions
     {
         internal List<TextMatter> DisplayStuff(string selectInput)
         {
-            var connectionString = "xxxxxx";
+            var connectionString = "Data Source=MSI;Initial Catalog=ResourcesWiki;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             var sql = $"select Text from dbo.Wiki where Chapter like '%{selectInput}%'";
 
             using (var connection = new SqlConnection(connectionString))
