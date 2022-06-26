@@ -8,6 +8,6 @@ namespace ResourceWiki.Database
 {
     public class SearchResults
     {
-        public string Result { get; set; }
+        public string? Result { get; set; }
     }
 }
